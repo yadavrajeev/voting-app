@@ -1,0 +1,29 @@
+1. user signin/signup.
+2. see the list of candidate.
+3. vote only one candidate, cannot vote again.
+4. user daa have unique id aadhar card number.
+5. one admin who manage list of candidate and can't vote.
+6. user can change their password.
+7. user login only with aadhar card and password.
+8. admin cant vote at all
+
+<--------------------------Routes----------------------------->
+user authnetication
+/signup:                       POST-user can create new account.
+/login:                        POST-user login to existing account (login iwth aadharcard and password).
+
+voting modules
+/candidate:                     GET-the candidate list.
+/vote/:candidateId:             POST-user can vote for specific candidate.
+
+vote counts
+/vote/counts:                   GET- get list of candidates sorted in vote counts.
+
+user profile
+/profile:                       GET-get the user,s profile information.
+/profile/password:              PUT-update the user password.
+
+Admin module
+/candidate:                     POST-create new candidate.
+/candidate/:candidateId:         PUT- admin can edit candidate.
+/candidate/:candidateId:         DELETE-admin delete candidate.
